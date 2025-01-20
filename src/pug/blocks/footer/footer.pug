@@ -1,3 +1,69 @@
 -
 footer.footer
-  .footer__inner FOOTER
+  .footer__upper
+    nav.footer__links
+      ul.footer__list
+        li.list-header
+          h7
+            a(href='#') О компании
+        each value in ['CNP Aikon', 'Производство', 'Новости', 'Проекты', 'Команда', 'Карьера', 'Медиа-материалы', 'Контакты']
+          li.list-item
+            a(href='#')= value
+
+      ul.footer__list
+        li.list-header
+          h7
+            a(href='#') Склад и поставки
+        each value in ['Складская программа', 'Наличие на складе','Будущие поставки', 'Срок поставки', 'Распродажа', 'Габариты упаковки']
+          li.list-item
+            a(href='#')= value
+
+      div.serv
+        ul.footer__list
+          li.list-header
+            h7
+              a(href='#') Сервис
+          each value in ['Сервисные центры', 'Гарантия']
+            li.list-item
+              a(href='#')= value
+        ul.footer__list
+          li.list-header
+            h7
+              a(href='#') Сотрудничество
+          each value in ['Дилерам', 'Сервисным партнерам']
+            li.list-item
+              a(href='#')= value
+
+      ul.footer__list--question
+        each value in ['Где купить', 'Прайс', 'История курса', 'Документация']
+          li.item
+            a(href='#')= value
+
+    .footer__contacts
+      ul.footer__list--numbers
+        li
+          a(href='tel:+78003331074') +7 800 333-10-74
+        li
+          a(href='tel:74997033523') +7 499 703-35-23
+      ul.footer__list--emails
+        each email in ['cnp@cnprussia.ru', 'info@aikoncontrol.ru', 'aikon@aikonrussia.ru']
+          li.email
+            a(href='mailto:' + email)= email
+      ul.footer__list--social
+        li.link
+          a(href='#')
+            img(src="/images/icon_vk.svg", alt="иконка ВКонтакте")
+        li.link
+          a(href='#')
+            img(src="/images/icon_ytb.svg", alt="иконка ютуб")
+        li.link
+          a(href='#')
+            img(src="/images/icon_tg.svg", alt="иконка телеграмм")
+
+  .footer__other
+    p.copyright © 2015–2024 CNP Russia
+    p.privacy-politic
+      a(href='#') Политика конфиденциальности
+    .logo Сделано в
+      a(href='#')
+        img(src="/images/icon-logo.svg", alt="логотип")
