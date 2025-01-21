@@ -1,31 +1,42 @@
+$font-family: 'TT Firs Neue', sans-serif;
+$color-main: rgba(255, 255, 255);
+$color-second: rgba(255, 255, 255, 0.7);
+$color-copyrigth: rgba(255, 255, 255, 0.4);
+$color-bg: #0b1226;
+$color-border: #282e40;
+$color-hline: rgba(255, 255, 255, 0.1);
+
+
 .footer {
-  flex: 0 1;
   max-width: 100vw;
   max-height: rem(566px);
   padding: rem(60px);
-  color: #fff;
-  font-family: 'TT Firs Neue';
+  color: $color-main;
+  font-family: $font-family;
   font-weight: 600;
-  background-color: #0b1226;
+  background-color: $color-bg;
+
+  a {
+    color: inherit;
+  }
 
   &__upper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    border-bottom: 1px solid $color-border;
   }
 
   &__links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
     gap: rem(20px);
-    margin-block-end: rem(40px);
+    margin-bottom: rem(60px);
+  }
 
-    .serv {
-      display: flex;
-      flex-direction: column;
-      gap: rem(65px);
-    }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: rem(65px);
   }
 
   &__list {
@@ -34,57 +45,51 @@
     gap: rem(16px);
     min-width: rem(283px);
 
-    .list-header {
-      padding-block-end: rem(16px);
-      font-size: rem(20px);
-    }
-
-    .list-item a {
-      font-family: 'TT Firs Neue';
-      font-weight: 400;
-      font-size: rem(16px);
-      line-height: rem(22.4px);
-    }
-
-    &--question {
-      display: flex;
-      flex-direction: column;
-      gap: rem(16px);
-      min-width: rem(283px);
+    &_question {
       font-size: rem(20px);
       line-height: rem(24px);
     }
 
-    &--numbers {
-      display: flex;
-      flex-direction: column;
+    &_phones {
       gap: rem(4px);
-      font-weight: 600;
-      font-size: rem(32px);
+      font: 600 rem(32px) $font-family;
       line-height: rem(38.4px);
       letter-spacing: calc(-1em / 50);
     }
 
-    &--emails {
-      display: flex;
-      flex-direction: column;
-      gap: rem(16px);
-      font-weight: 600;
+    &_emails {
       font-size: rem(20px);
       line-height: rem(24px);
     }
+  }
 
-    &--social {
-      display: flex;
-      gap: rem(10px);
-      margin-top: auto;
-      padding: rem(5px);
-      .link {
-        border: rem(1px) solid #282e40;
-        border-radius: rem(12px);
-        padding: rem(16px);
-      }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    gap: rem(10px);
+    margin-top: auto;
+    padding: rem(5px);
+    a {
+      width: rem(60px);
+      height: rem(60px);
+      border: 1px solid $color-border;
+      border-radius: rem(12px);
+      padding: rem(18px);
     }
+  }
+
+  &__list-head {
+    padding-bottom: rem(16px);
+    a {
+      font-size: rem(20px);
+      color: $color-main;
+    }
+  }
+
+  &__list-item a {
+    font: 400 rem(16px) $font-family;
+    color: $color-second;
+    line-height: rem(22.4px);
   }
 
   &__contacts {
@@ -92,7 +97,7 @@
     flex-direction: column;
     justify-content: start;
     gap: rem(20px);
-    margin-block-end: rem(60px);
+    margin-bottom: rem(60px);
     padding-left: rem(150px);
   }
 
@@ -100,17 +105,17 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     max-width: 86%;
-    border-top: rem(1px) solid rgba(255, 255, 255, 0.1);
-    padding-block-start: rem(45px);
-    color: rgba(255, 255, 255, 0.7);
+    padding-top: rem(45px);
+    color: $color-second;
     font-size: rem(16px);
     gap: rem(300px);
-    .logo {
-      justify-self: end;
+    color: $color-second;
+    p:first-of-type {
+      color: $color-copyrigth;
     }
   }
 
-  a {
-    color: inherit;
+  &__logo {
+    justify-self: end;
   }
 }

@@ -3,67 +3,82 @@ footer.footer
   .footer__upper
     nav.footer__links
       ul.footer__list
-        li.list-header
+        li.footer__list-head
           h7
             a(href='#') О компании
         each value in ['CNP Aikon', 'Производство', 'Новости', 'Проекты', 'Команда', 'Карьера', 'Медиа-материалы', 'Контакты']
-          li.list-item
+          li.footer__list-item
             a(href='#')= value
 
       ul.footer__list
-        li.list-header
+        li.footer__list-head
           h7
             a(href='#') Склад и поставки
         each value in ['Складская программа', 'Наличие на складе','Будущие поставки', 'Срок поставки', 'Распродажа', 'Габариты упаковки']
-          li.list-item
+          li.footer__list-item
             a(href='#')= value
 
-      div.serv
+      .footer__block
         ul.footer__list
-          li.list-header
+          li.footer__list-head
             h7
               a(href='#') Сервис
           each value in ['Сервисные центры', 'Гарантия']
-            li.list-item
+            li.footer__list-item
               a(href='#')= value
         ul.footer__list
-          li.list-header
+          li.footer__list-head
             h7
               a(href='#') Сотрудничество
           each value in ['Дилерам', 'Сервисным партнерам']
-            li.list-item
+            li.footer__list-item
               a(href='#')= value
 
-      ul.footer__list--question
+      ul.footer__list.footer__list_question
         each value in ['Где купить', 'Прайс', 'История курса', 'Документация']
           li.item
             a(href='#')= value
 
     .footer__contacts
-      ul.footer__list--numbers
+      ul.footer__list.footer__list_phones
         li
           a(href='tel:+78003331074') +7 800 333-10-74
         li
           a(href='tel:74997033523') +7 499 703-35-23
-      ul.footer__list--emails
+      ul.footer__list.footer__list_emails
         each email in ['cnp@cnprussia.ru', 'info@aikoncontrol.ru', 'aikon@aikonrussia.ru']
-          li.email
+          li
             a(href='mailto:' + email)= email
-      ul.footer__list--social
-        li.link
+      ul.footer__social
+        li
           a(href='#')
-            img(src="/images/icon_vk.svg", alt="иконка ВКонтакте")
-        li.link
+            img(
+              src='/images/icon_vk.svg',
+              alt='иконка ВКонтакте',
+              width='24px',
+              height='24px'
+            )
+        li
           a(href='#')
-            img(src="/images/icon_ytb.svg", alt="иконка ютуб")
-        li.link
+            img(
+              src='/images/icon_ytb.svg',
+              alt='иконка ютуб',
+              width='24px',
+              height='24px'
+            )
+        li
           a(href='#')
-            img(src="/images/icon_tg.svg", alt="иконка телеграмм")
+            img(
+              src='/images/icon_tg.svg',
+              alt='иконка телеграмм',
+              width='24px',
+              height='24px'
+            )
 
   .footer__other
-    p.copyright © 2015–2024 CNP Russia
-    p.privacy-politic
+    p © 2015–2024 CNP Russia
+    p
       a(href='#') Политика конфиденциальности
-    .logo Сделано в
+    .footer__logo Сделано в&nbsp;
       a(href='#')
-        img(src="/images/icon-logo.svg", alt="логотип")
+        img(src='/images/icon-logo.svg', alt='логотип')
