@@ -1,0 +1,59 @@
+mixin test-middle(mods)
+  -
+    const baseName = 'test-middle'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .test-middle(class=allMods)&attributes(attributes)
+    hr
+
+    .checkbox
+      input.checkbox__input#checkbox1(type="checkbox" checked)
+      label.checkbox__label(for="checkbox1") Прочитал условия пользования сайтом
+      input.checkbox__input#checkbox2(type="checkbox" )
+      label.checkbox__label(for="checkbox2") Прочитал условия пользования сайтом
+
+    hr
+
+    .radio
+      input.radio__input#radio1(type="radio" name="sex")
+      label.radio__label(for="radio1") муж
+      input.radio__input#radio2(type="radio" name="sex")
+      label.radio__label(for="radio2") жен
+
+    hr
+
+    .select
+      select#city(name="city" required)
+        option(value="" selected  disabled) -
+        option(value="Moscow") Москва
+        option(value="Voronezh") Воронеж
+
+    hr
+
+    .buttons
+      button.btn.small Кнопка
+      button.btn.middle Кнопка
+      button.btn.big Кнопка
+
+    hr
+
+    nav.navigate
+      ul
+        li
+          a(href="#") Обычная ссылка
+        li.accord
+          a(href="#") Необычная ссылка
+          ul.sublist
+            li
+              a(href="#") Необычно Обычная ссылка
+            li
+              a(href="#") Необычно Обычная ссылка
+        li
+          a(href="#") Обычная ссылка
