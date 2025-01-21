@@ -11,4 +11,121 @@ mixin test(mods)
     }
 
   .test(class=allMods)&attributes(attributes)
-    h1.test__title футер
+    hr
+    h1.title Оформление текста
+    p Классический текст Lorem Ipsum, используемый с XVI века
+      |"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      |eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      |ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    h2.subtitle Заголовок второго уровня
+    p Классический текст Lorem Ipsum, используемый с XVI века
+      |"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      |eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      |ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    ul.list
+      li молоко
+      li хлеб
+      li филиное куре
+
+    hr
+
+    a.link(href="/") Главная
+    a.link(href="/htnl-tasks") Контакты
+    a.link(href="https://www.google.ru/") Наш партнер
+    a.link(href="/public/present.pdf" download) Наша презентация
+
+    h1 Главная
+    p Сегодня вторник 21 января и я сижу делаю задания по html мне нарвица это риальна крутааааа
+    div
+      a(href="tel:28484848") Наш телефон: 28484848
+      a(href="mailto: info@website.com") Наш e-mail: info@website.com
+
+    hr
+
+    table.table
+      thead
+        tr
+          th №
+          th Имя
+          th E-mail
+          th Пол
+          th Дата
+      tbody
+        tr
+          td 1
+          td Вася
+          td v@pail.ti
+          td муж
+          td 1 янв
+        tr
+          td 2
+          td Мася
+          td m@mail.ru
+          td жен
+          td 12 апр
+        tr
+          td 3
+          td Гася
+          td gsd@a.ds
+          td жен
+          td 8 мая
+      tfoot
+        tr
+          td(colspan="5") Всего: 3
+
+    hr
+
+    .bg
+      img.asteroid(src="/images/abs/asteroid.png", alt="asteroid")
+      img.planet1(src="/images/abs/planet-1.png", alt="planet1")
+      img.planet2(src="/images/abs/planet-2.png", alt="planet2")
+      img.spaceship(src="/images/abs/spaceship.png", alt="spaceship")
+      img.planet3(src="/images/abs/planet-3.png", alt="planet3")
+      img.superman(src="/images/abs/superman.png", alt="superman")
+      img.ufo(src="/images/abs/ufo.png", alt="ufo")
+
+    hr
+
+    //- p.text Какой то интеренсый тест я его читать не буду и вам не советую
+    //- .mask
+    //- .modal
+    //-   h3 Модальное окно
+    //-   p "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    //-   button.btn.success(type='button') Принять
+    //-   button.btn.cancel(type='button') Отмена
+    //-   button(type='button').modal-close X
+
+    hr
+
+    form.form(action="" method="post")
+      input.input(type="text" placeholder="Ваше имя")
+      input.input(type="email" placeholder="Ваше email")
+      input.input(type="tel" placeholder="Ваше телефон")
+      input.input(type="password" placeholder="Пароль")
+      input.input(type="password" placeholder="Пароль еще раз")
+      button.btnsub(type="submit") Регистрация
+
+    hr
+
+    nav.pagenav
+      a.linka(href="#") &lt;
+      a.linka.active(href="#") 1
+      a.linka(href="#") 2
+      a.linka(href="#") 3
+      a.linka(href="#") &gt;
+
+    hr
+
+    nav
+      ul.breadcrumbs
+        li
+          a(href="#") Главная
+        li
+          a(href="#") Категория
+        li
+          span Продукт
+
+
+
+
+
