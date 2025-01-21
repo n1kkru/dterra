@@ -1,3 +1,252 @@
+hr {
+  margin-block: 15px;
+}
 .test {
+  padding: 50px 20px;
+  color: #333;
+  font:
+    rem(16px) Arial,
+    sans-serif;
+  line-height: 1.5;
+}
+
+// 1
+.title {
+  color: #f03333;
+  font-size: rem(40px);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #12ac11;
+  font-size: rem(30px);
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+.list {
+  color: #444;
+  font-size: rem(20px);
+  font-style: italic;
+  list-style-type: square;
+}
+
+// 2
+.link {
+  display: block;
+}
+
+// 4
+.table {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.table thead {
+  background-color: #f0f1f4;
+}
+
+.table tfoot {
+  color: #fff;
+  text-align: right;
+  background-color: #121212;
+}
+
+// 5
+.bg {
   position: relative;
+  width: 600px;
+  height: 400px;
+  background: url(../../src/images/abs/bg.jpg);
+  background-position: center;
+
+  .asteroid {
+    position: absolute;
+    inset: 80px 425px;
+  }
+
+  .planet1 {
+    position: absolute;
+    top: 20px;
+    left: 180px;
+  }
+
+  .planet2 {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+  }
+
+  .planet3 {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+  }
+
+  .spaceship {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+  }
+
+  .superman {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+  }
+  .ufo {
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+  }
+}
+
+// 6
+.modal {
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  z-index: 10;
+  width: 320px;
+  margin-left: -160px;
+  padding: 15px;
+  background-color: white;
+}
+
+.modal-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+}
+
+.success,
+.cancel {
+  padding: 7px 15px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.success {
+  background-color: #35bb27;
+}
+
+.cancel {
+  background-color: #f9861f;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+// 7
+.form {
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.btnsub {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #1cbc11;
+  cursor: pointer;
+  &:hover {
+    background-color: #14a20a;
+  }
+}
+
+// 8
+.pagenav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 300px;
+  height: 80px;
+  margin: 0 auto;
+
+  .linka {
+    width: 40px;
+    height: 40px;
+    color: #333;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ddd;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  .active {
+    color: #fff;
+    background-color: #d10953;
+  }
+}
+
+// 9
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+  font-size: 24px;
+
+  a {
+    color: #0b56ea;
+    font-family: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    position: relative;
+    padding-inline: rem(25px);
+  }
+
+  li:not(:last-child)::after {
+    content: '>';
+    position: absolute;
+    top: rem(3px);
+    right: -10px;
+    padding-inline: rem(5px);
+    color: #333;
+  }
+  span {
+    color: #333;
+  }
 }
